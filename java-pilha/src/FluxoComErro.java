@@ -1,5 +1,5 @@
 
-public class Fluxo {
+public class FluxoComErro {
 	
 	public static void main(String[] args) {
         System.out.println("Ini do main");
@@ -21,21 +21,20 @@ public class Fluxo {
         System.out.println("Fim do main");
     }
 
-    private static void metodo1() {
+    private static void metodo1() throws MinhaException {
         System.out.println("Ini do metodo1");
         metodo2();
+        /*
+	         * try {
+	        metodo2();
+	    	} catch(MinhaExcecao ex) {}
+         */
         System.out.println("Fim do metodo1");
     }
 
-    private static void metodo2() {
-        System.out.println("Ini do metodo2");
-      
-       
-        //throw new ArithmeticException("ERROR");
-        /*ArithmeticException exception = new ArithmeticException("ERROR");
-        throw exception;*/
-        throw new MinhaException("Error");
-        //System.out.println("Fim do metodo2");
+    private static void metodo2() throws MinhaException {
+    	System.out.println("Ini do metodo2");
+        throw new MinhaException("deu muito errado");
     }
 
 }
