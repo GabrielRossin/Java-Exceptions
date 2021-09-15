@@ -6,7 +6,7 @@ public class FluxoComErro {
         try
         {
         	metodo1();
-        }catch(ArithmeticException | NullPointerException | MinhaException ex)
+        }catch(ArithmeticException | NullPointerException ex)
         {
         	String msg = ex.getMessage();
             System.out.println("Exception " + msg);
@@ -21,7 +21,7 @@ public class FluxoComErro {
         System.out.println("Fim do main");
     }
 
-    private static void metodo1() throws MinhaException {
+    private static void metodo1() {
         System.out.println("Ini do metodo1");
         metodo2();
         /*
